@@ -26,9 +26,9 @@ public class TestBase {
 	public BrowserUtility getInatance() {
 		return homePage;
 	}
-//	
-//	@AfterMethod(description = "quiting the local browser sessions")
-//	public void closeLocalDriver() {
-//		BrowserUtility.tearDown();
-//	}
+	
+	@AfterMethod(description = "quiting the local browser sessions")
+	public void closeLocalDriver() {
+		BrowserUtility.tearDown();
+	}
 }
