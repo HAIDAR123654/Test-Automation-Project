@@ -24,7 +24,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Running Test Automation with Maven
-      run: mvn test -X -Dbrowser=chrome -DisHeadless=false
+      run: mvn test -X -Dbrowser=chrome -DisHeadless=true
 
     
 
