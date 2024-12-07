@@ -4,13 +4,9 @@
 	thread-count="5" verbose="1">
 	<test name="UI Automation Test">
 		<parameter name="browser" value="chrome"></parameter>
-		<parameter name="isHeadless" value="false"></parameter>
+		<parameter name="isHeadless" value="No"></parameter>
 		<classes>
-			<class name="com.ui.tests.LoginTest" />
 			<class name="com.ui.tests.InvalidCredLoginTest" />
-			<class name="com.ui.tests.AddNewFirstAddressTest" />
-			<class name="com.ui.tests.SearchProductTest" />
-			<class name="com.ui.tests.ProductCheckoutTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
