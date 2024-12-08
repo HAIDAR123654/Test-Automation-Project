@@ -16,8 +16,7 @@ public class InvalidCredLoginTest extends TestBase {
 	@Test(description = "Verify if the proper error message is shown for the user when they enter invalid credentials ",
 			groups = {"e2e", "sanity", "smoke" })
 	public void InvalidloginTest() {
-
 		assertEquals(homePage.goToLoginPage().doLoginWithInvalidCredentials(INVALID_EMAIL_ADDRESS, INVALID_PASSWORD)
-				.getErrorMessage(), "Authentication failed.1");
+				.getErrorMessage(), "Authentication failed.");
 	}
 }
