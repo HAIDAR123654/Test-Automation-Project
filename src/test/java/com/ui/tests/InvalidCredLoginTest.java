@@ -18,6 +18,6 @@ public class InvalidCredLoginTest extends TestBase {
 	public void InvalidloginTest() {
 
 		assertEquals(homePage.goToLoginPage().doLoginWithInvalidCredentials(INVALID_EMAIL_ADDRESS, INVALID_PASSWORD)
-				.getErrorMessage(), "Authentication failed.");
+				.getErrorMessage(), "Authentication failed.1");
 	}
 }
