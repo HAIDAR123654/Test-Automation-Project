@@ -3,10 +3,9 @@
 <suite name="Automation Practice Test Suite" parallel="methods"
 	thread-count="5" verbose="1">
 	<test name="UI Automation Test">
-		<parameter name="browser" value="chrome"></parameter>
-		<parameter name="isHeadless" value="No"></parameter>
+		<parameter name="browser" value="${browser}"></parameter>
+		<parameter name="isHeadless" value="${isHeadless}"></parameter>
 		<classes>
-			<class name="com.ui.tests.InvalidCredLoginTest" />
 			<class name="com.ui.tests.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
