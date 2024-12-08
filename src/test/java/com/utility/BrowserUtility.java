@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -121,8 +122,13 @@ public abstract class BrowserUtility {
 
 	public void clickOn(By locator) {
 		logger.info("Finding element with the locator " + locator);
+		WebElement element;
 		//WebElement element = driver.get().findElement(locator);// Find the element!!!---- Non synchronized method
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));//--synchronized method
+		try {
+			element = wait.until(ExpectedConditions.elementToBeClickable(locator));//--synchronized method
+		}catch(StaleElementReferenceException s) {
+			element = wait.until(ExpectedConditions.elementToBeClickable(locator));//--synchronized method
+		}
 		logger.info("Element found and now performing Click");
 		element.click();
 	}
